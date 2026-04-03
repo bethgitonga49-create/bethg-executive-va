@@ -14,7 +14,7 @@ export default function ContactPage() {
       backgroundColor: '#fafafa'
     }}>
       
-      {/* Navigation Bar */}
+      {/* NAVIGATION BAR - Updated with Green Theme, Learn & FAQ */}
       <nav style={{
         width: '100%',
         backgroundColor: 'white',
@@ -30,75 +30,53 @@ export default function ContactPage() {
           margin: '0 auto', 
           display: 'flex', 
           justifyContent: 'space-between', 
-          alignItems: 'center' 
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '16px'
         }}>
+          {/* Logo with Green Gradient */}
           <div style={{ 
-            fontWeight: 'bold', 
-            fontSize: '20px',
-            color: '#1a1a1a',
-            letterSpacing: '-0.5px'
+            fontFamily: "'Playfair Display', 'Times New Roman', Georgia, serif",
+            fontSize: '22px',
+            fontWeight: '700',
+            background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)',
+            backgroundClip: 'text',
+            WebkitBackgroundClip: 'text',
+            color: 'transparent',
+            letterSpacing: '-0.3px'
           }}>
             Beth G — Executive VA
           </div>
+          
+          {/* Navigation Links */}
           <div style={{ 
             display: 'flex', 
-            gap: '28px',
-            alignItems: 'center'
+            gap: '12px',
+            alignItems: 'center',
+            flexWrap: 'wrap'
           }}>
-            <Link 
-              href="/" 
-              style={{ 
-                textDecoration: 'none', 
-                color: '#1a1a1a',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '6px 0'
-              }}
-            >
-              Home
-            </Link>
-            <Link 
-              href="/services" 
-              style={{ 
-                textDecoration: 'none', 
-                color: '#1a1a1a',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '6px 0'
-              }}
-            >
-              Services
-            </Link>
-            <Link 
-              href="/blog" 
-              style={{ 
-                textDecoration: 'none', 
-                color: '#1a1a1a',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '6px 0'
-              }}
-            >
-              Blog
-            </Link>
-            <Link 
-              href="/contact" 
-              style={{ 
-                textDecoration: 'none', 
-                color: 'white',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '10px 24px',
-                backgroundColor: '#059669',
-                borderRadius: '8px',
-                borderBottom: '2px solid #059669'
-              }}
-            >
-              Contact
-            </Link>
+            <Link href="/" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>Home</Link>
+            <Link href="/services" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>Services</Link>
+            <Link href="/blog" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>Blog</Link>
+            <Link href="/learn" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>Learn</Link>
+            <Link href="/faq" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>FAQ</Link>
+            <Link href="/contact" style={{ textDecoration: 'none', color: 'white', fontWeight: '500', fontSize: '15px', padding: '10px 24px', backgroundColor: '#059669', borderRadius: '8px', transition: 'all 0.2s' }}>Contact</Link>
           </div>
         </div>
       </nav>
+
+      {/* CSS for hover effects */}
+      <style>{`
+        nav a:not(:last-child):hover {
+          background-color: #059669 !important;
+          color: white !important;
+          transform: scale(1.02);
+        }
+        nav a:last-child:hover {
+          background-color: #047857 !important;
+          transform: scale(1.02);
+        }
+      `}</style>
 
       {/* Main Content */}
       <div style={{ maxWidth: '1000px', margin: '0 auto', padding: '60px 20px' }}>
@@ -259,7 +237,7 @@ export default function ContactPage() {
               href="mailto:bethgexecutiveva@gmail.com"
               style={{
                 padding: '16px 32px',
-                backgroundColor: '#1a1a1a',
+                backgroundColor: '#059669',
                 color: 'white',
                 borderRadius: '10px',
                 textDecoration: 'none',
@@ -285,7 +263,7 @@ export default function ContactPage() {
               <span style={{ 
                 width: '8px', 
                 height: '8px', 
-                backgroundColor: '#3b82f6',
+                backgroundColor: '#059669',
                 borderRadius: '50%'
               }}></span>
               <span>Respond within 2-4 hours</span>

@@ -92,7 +92,7 @@ export default function BlogPage() {
       paddingTop: '80px'
     }}>
       
-      {/* Navigation */}
+      {/* NAVIGATION BAR - Updated with Green Theme, Learn & FAQ */}
       <nav style={{
         width: '100%',
         backgroundColor: 'white',
@@ -108,75 +108,53 @@ export default function BlogPage() {
           margin: '0 auto', 
           display: 'flex', 
           justifyContent: 'space-between', 
-          alignItems: 'center' 
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '16px'
         }}>
+          {/* Logo with Green Gradient */}
           <div style={{ 
-            fontWeight: 'bold', 
-            fontSize: '20px',
-            color: '#1a1a1a',
-            letterSpacing: '-0.5px'
+            fontFamily: "'Playfair Display', 'Times New Roman', Georgia, serif",
+            fontSize: '22px',
+            fontWeight: '700',
+            background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)',
+            backgroundClip: 'text',
+            WebkitBackgroundClip: 'text',
+            color: 'transparent',
+            letterSpacing: '-0.3px'
           }}>
             Beth G — Executive VA
           </div>
+          
+          {/* Navigation Links */}
           <div style={{ 
             display: 'flex', 
-            gap: '28px',
-            alignItems: 'center'
+            gap: '12px',
+            alignItems: 'center',
+            flexWrap: 'wrap'
           }}>
-            <Link 
-              href="/" 
-              style={{ 
-                textDecoration: 'none', 
-                color: '#1a1a1a',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '6px 0'
-              }}
-            >
-              Home
-            </Link>
-            <Link 
-              href="/services" 
-              style={{ 
-                textDecoration: 'none', 
-                color: '#1a1a1a',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '6px 0'
-              }}
-            >
-              Services
-            </Link>
-            <Link 
-              href="/blog" 
-              style={{ 
-                textDecoration: 'none', 
-                color: '#1a1a1a',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '6px 0',
-                borderBottom: '2px solid #1a1a1a'
-              }}
-            >
-              Blog
-            </Link>
-            <Link 
-              href="/contact" 
-              style={{ 
-                textDecoration: 'none', 
-                color: 'white',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '10px 24px',
-                backgroundColor: '#1a1a1a',
-                borderRadius: '8px'
-              }}
-            >
-              Contact
-            </Link>
+            <Link href="/" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>Home</Link>
+            <Link href="/services" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>Services</Link>
+            <Link href="/blog" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>Blog</Link>
+            <Link href="/learn" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>Learn</Link>
+            <Link href="/faq" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>FAQ</Link>
+            <Link href="/contact" style={{ textDecoration: 'none', color: 'white', fontWeight: '500', fontSize: '15px', padding: '10px 24px', backgroundColor: '#059669', borderRadius: '8px', transition: 'all 0.2s' }}>Contact</Link>
           </div>
         </div>
       </nav>
+
+      {/* CSS for hover effects */}
+      <style>{`
+        nav a:not(:last-child):hover {
+          background-color: #059669 !important;
+          color: white !important;
+          transform: scale(1.02);
+        }
+        nav a:last-child:hover {
+          background-color: #047857 !important;
+          transform: scale(1.02);
+        }
+      `}</style>
 
       {/* Main Content */}
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '40px 20px' }}>
@@ -216,7 +194,7 @@ export default function BlogPage() {
                 key={category}
                 style={{
                   padding: '10px 20px',
-                  backgroundColor: category === 'All Posts' ? '#1a1a1a' : 'white',
+                  backgroundColor: category === 'All Posts' ? '#059669' : 'white',
                   color: category === 'All Posts' ? 'white' : '#52525b',
                   border: '1px solid #e5e5e5',
                   borderRadius: '50px',
@@ -310,7 +288,7 @@ export default function BlogPage() {
             href="/blog/why-you-need-bethg-executive-va"
             style={{
               padding: '14px 32px',
-              backgroundColor: '#1a1a1a',
+              backgroundColor: '#059669',
               color: 'white',
               borderRadius: '10px',
               textDecoration: 'none',
@@ -419,8 +397,8 @@ export default function BlogPage() {
                     href={getPostUrl(post.id)}
                     style={{
                       padding: '8px 20px',
-                      backgroundColor: '#f4f4f5',
-                      color: '#1a1a1a',
+                      backgroundColor: '#059669',
+                      color: 'white',
                       borderRadius: '6px',
                       textDecoration: 'none',
                       fontSize: '14px',
@@ -491,7 +469,7 @@ export default function BlogPage() {
             <button
               style={{
                 padding: '14px 32px',
-                backgroundColor: '#1a1a1a',
+                backgroundColor: '#059669',
                 color: 'white',
                 border: 'none',
                 borderRadius: '8px',

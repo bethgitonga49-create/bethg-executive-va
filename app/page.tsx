@@ -14,7 +14,7 @@ export default function Home() {
       backgroundColor: '#fafafa'
     }}>
       
-      {/* NAVIGATION BAR */}
+      {/* NAVIGATION BAR - Updated with Learn and FAQ */}
       <nav style={{
         width: '100%',
         backgroundColor: 'white',
@@ -34,7 +34,7 @@ export default function Home() {
           flexWrap: 'wrap',
           gap: '16px'
         }}>
-          {/* Stylish Logo - Changed to Green */}
+          {/* Logo with Green Gradient */}
           <div style={{ 
             fontFamily: "'Playfair Display', 'Times New Roman', Georgia, serif",
             fontSize: '22px',
@@ -48,72 +48,35 @@ export default function Home() {
             Beth G — Executive VA
           </div>
           
+          {/* Navigation Links */}
           <div style={{ 
             display: 'flex', 
-            gap: '28px',
+            gap: '12px',
             alignItems: 'center',
             flexWrap: 'wrap'
           }}>
-            <Link 
-              href="/" 
-              style={{ 
-                textDecoration: 'none', 
-                color: '#1a1a1a',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '6px 0',
-                borderBottom: '2px solid #059669',
-                transition: 'all 0.2s'
-              }}
-            >
-              Home
-            </Link>
-            <Link 
-              href="/services" 
-              style={{ 
-                textDecoration: 'none', 
-                color: '#1a1a1a',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '6px 0',
-                borderBottom: '2px solid transparent',
-                transition: 'all 0.2s'
-              }}
-            >
-              Services
-            </Link>
-            <Link 
-              href="/blog" 
-              style={{ 
-                textDecoration: 'none', 
-                color: '#1a1a1a',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '6px 0',
-                borderBottom: '2px solid transparent',
-                transition: 'all 0.2s'
-              }}
-            >
-              Blog
-            </Link>
-            <Link 
-              href="/contact" 
-              style={{ 
-                textDecoration: 'none', 
-                color: 'white',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '10px 24px',
-                backgroundColor: '#059669',
-                borderRadius: '8px',
-                transition: 'all 0.2s'
-              }}
-            >
-              Contact
-            </Link>
+            <Link href="/" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>Home</Link>
+            <Link href="/services" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>Services</Link>
+            <Link href="/blog" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>Blog</Link>
+            <Link href="/learn" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>Learn</Link>
+            <Link href="/faq" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>FAQ</Link>
+            <Link href="/contact" style={{ textDecoration: 'none', color: 'white', fontWeight: '500', fontSize: '15px', padding: '10px 24px', backgroundColor: '#059669', borderRadius: '8px', transition: 'all 0.2s' }}>Contact</Link>
           </div>
         </div>
       </nav>
+
+      {/* CSS for hover effects */}
+      <style>{`
+        nav a:not(:last-child):hover {
+          background-color: #059669 !important;
+          color: white !important;
+          transform: scale(1.02);
+        }
+        nav a:last-child:hover {
+          background-color: #047857 !important;
+          transform: scale(1.02);
+        }
+      `}</style>
 
       {/* HERO SECTION */}
       <section style={{
@@ -621,54 +584,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
-      {/* CSS for all hover effects - Changed to Green */}
-      <style>{`
-        /* Navigation links hover effects */
-        nav a:not(:last-child):hover {
-          border-bottom-color: #059669 !important;
-          color: #059669 !important;
-        }
-        
-        /* Contact button hover effect */
-        nav a:last-child:hover {
-          background-color: #047857 !important;
-          transform: scale(1.02);
-        }
-        
-        /* Hero section buttons hover */
-        section:first-of-type a:first-of-type:hover {
-          background-color: #047857 !important;
-          transform: scale(1.02);
-        }
-        section:first-of-type a:last-child:hover {
-          background-color: #059669 !important;
-          color: white !important;
-          transform: scale(1.02);
-        }
-        
-        /* CTA section buttons hover */
-        section:last-of-type a:first-of-type:hover {
-          background-color: #047857 !important;
-          transform: scale(1.02);
-        }
-        section:last-of-type a:last-child:hover {
-          background-color: #059669 !important;
-          color: white !important;
-          transform: scale(1.02);
-        }
-        
-        /* Footer social links hover */
-        footer a:hover {
-          background-color: #059669 !important;
-          transform: translateY(-2px);
-        }
-        
-        /* Smooth transitions for all interactive elements */
-        a, button {
-          transition: all 0.2s ease !important;
-        }
-      `}</style>
     </div>
   );
 }

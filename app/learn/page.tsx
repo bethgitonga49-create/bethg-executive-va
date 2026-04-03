@@ -88,7 +88,7 @@ export default function LearnPage() {
       backgroundColor: '#fafafa'
     }}>
       
-      {/* Navigation Bar */}
+      {/* NAVIGATION BAR - Updated with GREEN theme, Learn & FAQ */}
       <nav style={{
         width: '100%',
         backgroundColor: 'white',
@@ -104,80 +104,58 @@ export default function LearnPage() {
           margin: '0 auto', 
           display: 'flex', 
           justifyContent: 'space-between', 
-          alignItems: 'center' 
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '16px'
         }}>
+          {/* Logo with Green Gradient */}
           <div style={{ 
-            fontWeight: 'bold', 
-            fontSize: '20px',
-            color: '#1a1a1a',
-            letterSpacing: '-0.5px'
+            fontFamily: "'Playfair Display', 'Times New Roman', Georgia, serif",
+            fontSize: '22px',
+            fontWeight: '700',
+            background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)',
+            backgroundClip: 'text',
+            WebkitBackgroundClip: 'text',
+            color: 'transparent',
+            letterSpacing: '-0.3px'
           }}>
             Beth G — Executive VA
           </div>
+          
+          {/* Navigation Links */}
           <div style={{ 
             display: 'flex', 
-            gap: '28px',
-            alignItems: 'center'
+            gap: '12px',
+            alignItems: 'center',
+            flexWrap: 'wrap'
           }}>
-            <Link 
-              href="/" 
-              style={{ 
-                textDecoration: 'none', 
-                color: '#1a1a1a',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '6px 0'
-              }}
-            >
-              Home
-            </Link>
-            <Link 
-              href="/services" 
-              style={{ 
-                textDecoration: 'none', 
-                color: '#1a1a1a',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '6px 0'
-              }}
-            >
-              Services
-            </Link>
-            <Link 
-              href="/blog" 
-              style={{ 
-                textDecoration: 'none', 
-                color: '#1a1a1a',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '6px 0'
-              }}
-            >
-              Blog
-            </Link>
-            <Link 
-              href="/learn" 
-              style={{ 
-                textDecoration: 'none', 
-                color: 'white',
-                fontWeight: '500',
-                fontSize: '15px',
-                padding: '10px 24px',
-                backgroundColor: '#1a1a1a',
-                borderRadius: '8px',
-                borderBottom: '2px solid #1a1a1a'
-              }}
-            >
-              Learn
-            </Link>
+            <Link href="/" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>Home</Link>
+            <Link href="/services" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>Services</Link>
+            <Link href="/blog" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>Blog</Link>
+            <Link href="/learn" style={{ textDecoration: 'none', color: 'white', fontWeight: '500', fontSize: '15px', padding: '10px 24px', backgroundColor: '#059669', borderRadius: '8px', transition: 'all 0.2s' }}>Learn</Link>
+            <Link href="/faq" style={{ textDecoration: 'none', color: '#1a1a1a', fontWeight: '500', fontSize: '15px', padding: '10px 20px', borderRadius: '8px', transition: 'all 0.2s' }}>FAQ</Link>
+            <Link href="/contact" style={{ textDecoration: 'none', color: 'white', fontWeight: '500', fontSize: '15px', padding: '10px 24px', backgroundColor: '#059669', borderRadius: '8px', transition: 'all 0.2s' }}>Contact</Link>
           </div>
         </div>
       </nav>
 
+      {/* CSS for hover effects */}
+      <style>{`
+        nav a:not(:last-child):not(:nth-last-child(2)):hover {
+          background-color: #059669 !important;
+          color: white !important;
+          transform: scale(1.02);
+        }
+        nav a:last-child:hover, nav a:nth-last-child(2):hover {
+          background-color: #047857 !important;
+          transform: scale(1.02);
+        }
+      `}</style>
+
       {/* Main Content */}
       <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '60px 20px' }}>
         
-        {/* Hero Section */}
+        {/* Hero Section - Updated with GREEN */}
         <div style={{ textAlign: 'center', marginBottom: '60px' }}>
           <h1 style={{ 
             fontSize: '48px', 
@@ -211,7 +189,7 @@ export default function LearnPage() {
               href="#coaching"
               style={{
                 padding: '14px 32px',
-                backgroundColor: '#7c3aed',
+                backgroundColor: '#059669',
                 color: 'white',
                 borderRadius: '10px',
                 textDecoration: 'none',
@@ -227,9 +205,9 @@ export default function LearnPage() {
               href="#civic-education"
               style={{
                 padding: '14px 32px',
-                border: '2px solid #7c3aed',
+                border: '2px solid #059669',
                 backgroundColor: 'transparent',
-                color: '#7c3aed',
+                color: '#059669',
                 borderRadius: '10px',
                 textDecoration: 'none',
                 display: 'inline-block',
@@ -319,10 +297,10 @@ export default function LearnPage() {
                       }}
                     >
                       <span style={{ 
-                        color: '#a1a1aa', 
+                        color: '#059669', 
                         marginRight: '12px',
                         marginTop: '5px'
-                      }}>•</span>
+                      }}>`</span>
                       {topic}
                     </li>
                   ))}
@@ -332,11 +310,11 @@ export default function LearnPage() {
           </div>
         </div>
 
-        {/* VA Coaching Section */}
+        {/* VA Coaching Section - Updated with GREEN */}
         <div 
           id="coaching"
           style={{ 
-            backgroundColor: '#f0f9ff',
+            backgroundColor: '#f0fdf4',
             borderRadius: '16px',
             padding: '60px',
             marginBottom: '60px'
@@ -346,14 +324,14 @@ export default function LearnPage() {
             <h2 style={{ 
               fontSize: '36px', 
               fontWeight: 700,
-              color: '#075985',
+              color: '#166534',
               marginBottom: '16px'
             }}>
               Virtual Assistant Coaching
             </h2>
             
             <p style={{
-              color: '#0c4a6e',
+              color: '#065f46',
               fontSize: '18px',
               lineHeight: '1.7',
               maxWidth: '700px',
@@ -392,13 +370,13 @@ export default function LearnPage() {
                   backgroundColor: 'white',
                   borderRadius: '12px',
                   padding: '32px',
-                  border: '1px solid #bae6fd'
+                  border: '1px solid #bbf7d0'
                 }}
               >
                 <h3 style={{ 
                   fontSize: '20px', 
                   fontWeight: 700,
-                  color: '#075985',
+                  color: '#166534',
                   marginBottom: '12px'
                 }}>
                   {packageItem.title}
@@ -423,14 +401,14 @@ export default function LearnPage() {
                       key={itemIndex}
                       style={{
                         marginBottom: '8px',
-                        color: '#0c4a6e',
+                        color: '#065f46',
                         fontSize: '15px',
                         display: 'flex',
                         alignItems: 'center'
                       }}
                     >
                       <span style={{ 
-                        color: '#38bdf8', 
+                        color: '#059669', 
                         marginRight: '12px',
                         fontWeight: 'bold'
                       }}>✓</span>
@@ -447,7 +425,7 @@ export default function LearnPage() {
               href="/contact"
               style={{
                 padding: '16px 36px',
-                backgroundColor: '#075985',
+                backgroundColor: '#059669',
                 color: 'white',
                 borderRadius: '10px',
                 textDecoration: 'none',
@@ -556,7 +534,7 @@ export default function LearnPage() {
               href="mailto:bethgexecutiveva@gmail.com?subject=Civic Education Inquiry"
               style={{
                 padding: '16px 36px',
-                backgroundColor: '#166534',
+                backgroundColor: '#059669',
                 color: 'white',
                 borderRadius: '10px',
                 textDecoration: 'none',
@@ -599,7 +577,7 @@ export default function LearnPage() {
               href="/contact"
               style={{
                 padding: '16px 36px',
-                backgroundColor: '#1a1a1a',
+                backgroundColor: '#059669',
                 color: 'white',
                 borderRadius: '10px',
                 textDecoration: 'none',
@@ -617,10 +595,10 @@ export default function LearnPage() {
               rel="noopener noreferrer"
               style={{
                 padding: '16px 36px',
-                border: '2px solid #1a1a1a',
+                border: '2px solid #059669',
                 backgroundColor: 'transparent',
-                color: '#1a1a1a',
-                borderRadius: '1010px',
+                color: '#059669',
+                borderRadius: '10px',
                 textDecoration: 'none',
                 display: 'inline-block',
                 fontWeight: '600',
