@@ -1,94 +1,674 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "Beth G — Executive VA | Professional Virtual Assistant Services",
+  description: "Strategic executive support for founders, consultants, and growing businesses. Remote VA services including calendar management, business operations, and project coordination.",
+};
+
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-50 font-sans">
-      {/* Hero Section */}
-      <section className="text-center py-32 px-6 sm:px-16">
-        <h1 className="text-5xl font-bold mb-4">
-          Beth G — Executive Virtual Assistant
-        </h1>
-        <p className="text-xl max-w-xl mx-auto mb-6">
-          I support founders, consultants, and growing businesses with strategic executive assistance built on clarity, discretion, and results. I handle your admin so you can focus on what you do best.
-        </p>
-        <div className="flex justify-center gap-4 flex-wrap">
-          <Link href="/services" className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition">
-            Explore Services
-          </Link>
-          <Link href="/contact" className="px-6 py-3 border border-gray-900 rounded-lg hover:bg-gray-100 transition">
-            Get in Touch
-          </Link>
-        </div>
-      </section>
-
-      {/* Features / Offerings */}
-      <section className="py-24 px-6 sm:px-16 bg-white dark:bg-gray-800">
-        <h2 className="text-3xl font-semibold text-center mb-12">What I Offer</h2>
-        <div className="grid gap-8 md:grid-cols-3 text-center">
-          <div className="p-6 border rounded-lg hover:shadow-lg transition">
-            <h3 className="text-xl font-bold mb-2">Executive Support</h3>
-            <p>Calendar management, scheduling, correspondence, and strategic business support tailored to your needs.</p>
+    <div style={{ 
+      width: '100%', 
+      minHeight: '100vh', 
+      fontFamily: 'system-ui, -apple-system, sans-serif',
+      backgroundColor: '#fafafa'
+    }}>
+      
+      {/* NAVIGATION BAR */}
+      <nav style={{
+        width: '100%',
+        backgroundColor: 'white',
+        padding: '18px 20px',
+        borderBottom: '1px solid #e5e5e5',
+        position: 'sticky',
+        top: 0,
+        zIndex: 100,
+        boxShadow: '0 2px 10px rgba(0,0,0,0.05)'
+      }}>
+        <div style={{ 
+          maxWidth: '1200px', 
+          margin: '0 auto', 
+          display: 'flex', 
+          justifyContent: 'space-between', 
+          alignItems: 'center',
+          flexWrap: 'wrap',
+          gap: '16px'
+        }}>
+          {/* Stylish Logo */}
+          <div style={{ 
+            fontFamily: "'Playfair Display', 'Times New Roman', Georgia, serif",
+            fontSize: '22px',
+            fontWeight: '700',
+            background: 'linear-gradient(135deg, #7c3aed 0%, #c084fc 100%)',
+            backgroundClip: 'text',
+            WebkitBackgroundClip: 'text',
+            color: 'transparent',
+            letterSpacing: '-0.3px'
+          }}>
+            Beth G — Executive VA
           </div>
-          <div className="p-6 border rounded-lg hover:shadow-lg transition">
-            <h3 className="text-xl font-bold mb-2">Digital Skills Guidance</h3>
-            <p>Training and support for online tools, productivity apps, and systems to streamline your workflows.</p>
+          
+          <div style={{ 
+            display: 'flex', 
+            gap: '28px',
+            alignItems: 'center',
+            flexWrap: 'wrap'
+          }}>
+            <Link 
+              href="/" 
+              style={{ 
+                textDecoration: 'none', 
+                color: '#1a1a1a',
+                fontWeight: '500',
+                fontSize: '15px',
+                padding: '6px 0',
+                borderBottom: '2px solid #7c3aed',
+                transition: 'all 0.2s'
+              }}
+            >
+              Home
+            </Link>
+            <Link 
+              href="/services" 
+              style={{ 
+                textDecoration: 'none', 
+                color: '#1a1a1a',
+                fontWeight: '500',
+                fontSize: '15px',
+                padding: '6px 0',
+                borderBottom: '2px solid transparent',
+                transition: 'all 0.2s'
+              }}
+            >
+              Services
+            </Link>
+            <Link 
+              href="/blog" 
+              style={{ 
+                textDecoration: 'none', 
+                color: '#1a1a1a',
+                fontWeight: '500',
+                fontSize: '15px',
+                padding: '6px 0',
+                borderBottom: '2px solid transparent',
+                transition: 'all 0.2s'
+              }}
+            >
+              Blog
+            </Link>
+            <Link 
+              href="/contact" 
+              style={{ 
+                textDecoration: 'none', 
+                color: 'white',
+                fontWeight: '500',
+                fontSize: '15px',
+                padding: '10px 24px',
+                backgroundColor: '#7c3aed',
+                borderRadius: '8px',
+                transition: 'all 0.2s'
+              }}
+            >
+              Contact
+            </Link>
           </div>
-          <div className="p-6 border rounded-lg hover:shadow-lg transition">
-            <h3 className="text-xl font-bold mb-2">Civic & Educational Support</h3>
-            <p>Resources and guidance on civic education, online learning, and personal development for you and your team.</p>
+        </div>
+      </nav>
+
+      {/* HERO SECTION */}
+      <section style={{
+        width: '100%',
+        backgroundColor: '#f4f4f5',
+        padding: '100px 20px',
+        textAlign: 'center',
+        borderBottom: '1px solid #e5e5e5'
+      }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h1 style={{ 
+            fontSize: '56px', 
+            fontWeight: 700, 
+            marginBottom: '24px',
+            color: '#1a1a1a',
+            lineHeight: '1.1',
+            letterSpacing: '-1px'
+          }}>
+            Beth G — Executive VA
+          </h1>
+
+          <p style={{
+            color: '#52525b',
+            maxWidth: '700px',
+            margin: '0 auto 50px',
+            fontSize: '20px',
+            lineHeight: '1.7'
+          }}>
+            I support <strong style={{ color: '#7c3aed' }}>founders, consultants, and growing businesses</strong> with strategic executive assistance built on clarity, discretion, and results. I handle your admin — so you can focus on what truly matters.
+          </p>
+
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+            <Link 
+              href="/services" 
+              style={{
+                padding: '16px 36px',
+                backgroundColor: '#7c3aed',
+                color: 'white',
+                borderRadius: '10px',
+                textDecoration: 'none',
+                display: 'inline-block',
+                fontWeight: '600',
+                fontSize: '16px',
+                transition: 'all 0.2s'
+              }}
+            >
+              Explore Services
+            </Link>
+
+            <Link 
+              href="/contact" 
+              style={{
+                padding: '16px 36px',
+                border: '2px solid #7c3aed',
+                backgroundColor: 'transparent',
+                color: '#7c3aed',
+                borderRadius: '10px',
+                textDecoration: 'none',
+                display: 'inline-block',
+                fontWeight: '600',
+                fontSize: '16px',
+                transition: 'all 0.2s'
+              }}
+            >
+              Get in Touch
+            </Link>
           </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-24 px-6 sm:px-16">
-        <h2 className="text-3xl font-semibold text-center mb-12">Frequently Asked Questions</h2>
-        <div className="max-w-3xl mx-auto space-y-4">
-          <details className="p-4 border rounded-lg">
-            <summary className="font-semibold cursor-pointer">What services do you provide?</summary>
-            <p className="mt-2">I provide executive assistance, online skills guidance, digital tools support, and civic education.</p>
-          </details>
-          <details className="p-4 border rounded-lg">
-            <summary className="font-semibold cursor-pointer">How do I hire you?</summary>
-            <p className="mt-2">You can contact me via the contact page or email. Payment options will be available through Flutterwave integration soon.</p>
-          </details>
-          <details className="p-4 border rounded-lg">
-            <summary className="font-semibold cursor-pointer">Can I request custom services?</summary>
-            <p className="mt-2">Absolutely! I tailor support packages to your business needs. Contact me for a consultation.</p>
-          </details>
+      {/* SERVICES SECTION - White */}
+      <section style={{
+        width: '100%',
+        padding: '100px 20px',
+        backgroundColor: 'white'
+      }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <h2 style={{
+              fontSize: '40px',
+              fontWeight: 700,
+              marginBottom: '16px',
+              color: '#1a1a1a',
+              letterSpacing: '-0.5px'
+            }}>
+              What I Do
+            </h2>
+            <p style={{
+              color: '#7c3aed',
+              fontSize: '18px',
+              maxWidth: '600px',
+              margin: '0 auto',
+              lineHeight: '1.6'
+            }}>
+              Comprehensive executive support tailored to your business needs
+            </p>
+          </div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gap: '30px'
+          }}>
+            {[
+              {
+                title: "Core Executive Support",
+                preview: "Calendar & inbox management",
+                items: ["Meeting coordination", "Document preparation", "Daily operations support", "Email management"],
+                color: '#f4f4f5'
+              },
+              {
+                title: "Business Operations",
+                preview: "Workflow organization",
+                items: ["CRM updates", "Client communication", "Process documentation", "System setup"],
+                color: '#fafafa'
+              },
+              {
+                title: "Project Coordination",
+                preview: "Task tracking & deadlines",
+                items: ["Deadline management", "Team follow-ups", "Progress reporting", "Milestone tracking"],
+                color: '#f4f4f5'
+              },
+              {
+                title: "Digital Administration",
+                preview: "File systems & data",
+                items: ["Online research", "Data organization", "Email handling", "Digital filing"],
+                color: '#fafafa'
+              },
+              {
+                title: "Founder Support",
+                preview: "Personal & executive admin",
+                items: ["Scheduling", "Travel planning", "Priority management", "Personal tasks"],
+                color: '#f4f4f5'
+              },
+              {
+                title: "Growth Assistance",
+                preview: "Lead tracking & outreach",
+                items: ["Outreach support", "Content coordination", "Business structuring", "Growth tracking"],
+                color: '#fafafa'
+              },
+            ].map((service, i) => (
+              <div key={i} style={{ textAlign: 'center' }}>
+                <details style={{ 
+                  border: '1px solid #e5e5e5',
+                  borderRadius: '16px',
+                  padding: '28px',
+                  backgroundColor: service.color,
+                  cursor: 'pointer',
+                  textAlign: 'left',
+                  height: '100%'
+                }}>
+                  <summary style={{ 
+                    cursor: 'pointer', 
+                    listStyle: 'none',
+                    outline: 'none'
+                  }}>
+                    <div style={{ 
+                      display: 'flex', 
+                      justifyContent: 'space-between',
+                      alignItems: 'flex-start',
+                      marginBottom: '16px'
+                    }}>
+                      <h3 style={{ 
+                        fontSize: '20px', 
+                        fontWeight: '600', 
+                        color: '#1a1a1a',
+                        margin: 0,
+                        flex: 1
+                      }}>
+                        {service.title}
+                      </h3>
+                      <span style={{ 
+                        color: '#7c3aed', 
+                        marginLeft: '12px',
+                        fontSize: '12px'
+                      }}>▼</span>
+                    </div>
+                    <p style={{ 
+                      color: '#52525b', 
+                      marginBottom: '20px',
+                      fontSize: '15px',
+                      lineHeight: '1.5'
+                    }}>
+                      {service.preview}
+                    </p>
+                    <div style={{ 
+                      fontSize: '13px', 
+                      color: '#7c3aed',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px'
+                    }}>
+                      <span>Click to view details</span>
+                    </div>
+                  </summary>
+                  
+                  <div style={{ 
+                    marginTop: '24px', 
+                    paddingTop: '24px', 
+                    borderTop: '1px solid #e5e5e5'
+                  }}>
+                    <ul style={{ 
+                      listStyle: 'none', 
+                      padding: 0, 
+                      margin: 0,
+                      display: 'grid',
+                      gap: '10px'
+                    }}>
+                      {service.items.map((item, idx) => (
+                        <li key={idx} style={{ 
+                          color: '#52525b',
+                          display: 'flex',
+                          alignItems: 'center',
+                          fontSize: '15px',
+                          padding: '6px 0'
+                        }}>
+                          <span style={{ 
+                            color: '#7c3aed', 
+                            marginRight: '12px',
+                            fontSize: '18px'
+                          }}>`</span>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <div style={{
+                      marginTop: '28px',
+                      paddingTop: '20px',
+                      borderTop: '1px solid #f0f0f0',
+                      textAlign: 'right'
+                    }}>
+                      <span style={{ 
+                        fontSize: '10px',
+                        letterSpacing: '3px',
+                        color: '#a1a1aa',
+                        textTransform: 'uppercase',
+                        fontWeight: '500'
+                      }}>
+                        BETH G — EXECUTIVE VA
+                      </span>
+                    </div>
+                  </div>
+                </details>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Call to Action */}
-      <section className="py-16 px-6 sm:px-16 text-center bg-gray-100 dark:bg-gray-700">
-        <h2 className="text-3xl font-semibold mb-6">Ready to get started?</h2>
-        <p className="mb-6 max-w-xl mx-auto">Let’s work together to streamline your business, save your time, and grow your impact.</p>
-        <div className="flex justify-center gap-4 flex-wrap">
-          <Link href="/contact" className="px-6 py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition">
-            Hire Me
-          </Link>
-          <Link href="/services" className="px-6 py-3 border border-gray-900 rounded-lg hover:bg-gray-100 transition">
-            View Services
-          </Link>
+      {/* FAQ SECTION */}
+      <section style={{
+        width: '100%',
+        padding: '100px 20px',
+        backgroundColor: '#fafafa',
+        borderTop: '1px solid #e5e5e5',
+        borderBottom: '1px solid #e5e5e5'
+      }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '60px' }}>
+            <h2 style={{
+              fontSize: '40px',
+              fontWeight: 700,
+              marginBottom: '16px',
+              color: '#1a1a1a',
+              letterSpacing: '-0.5px'
+            }}>
+              Frequently Asked Questions
+            </h2>
+            <p style={{
+              color: '#7c3aed',
+              fontSize: '18px',
+              maxWidth: '600px',
+              margin: '0 auto',
+              lineHeight: '1.6'
+            }}>
+              Common questions about executive virtual assistance
+            </p>
+          </div>
+
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            {[
+              {
+                question: "What makes an Executive VA different from a regular VA?",
+                answer: "An Executive VA goes beyond basic tasks. I help structure operations, support decision-making, manage priorities, and act as a strategic partner — not just an assistant. Think of me as your right-hand person who understands your business goals."
+              },
+              {
+                question: "Who do you typically work with?",
+                answer: "Founders, consultants, online business owners, startups, and professionals who need reliable executive-level support. If you're overwhelmed with admin tasks and need strategic help, we're a great fit."
+              },
+              {
+                question: "Do you also help beginners and aspiring remote workers?",
+                answer: "Yes! I guide beginners on tools, structure, remote platforms, and how to build sustainable online work — especially for those starting from zero. I offer coaching for aspiring VAs too."
+              },
+              {
+                question: "What tools and platforms do you use?",
+                answer: "Google Workspace, Notion, ClickUp, Trello, Slack, Zoom, email platforms, CRMs (HubSpot, Salesforce), and AI tools depending on client needs. I'm adaptable to your preferred tools."
+              },
+              {
+                question: "Are your services fully remote?",
+                answer: "Yes — 100% remote. I work with clients globally across different time zones. All communication and work happen through secure online platforms."
+              },
+              {
+                question: "How do payments and invoicing work?",
+                answer: "You'll receive a secure Flutterwave payment link once we agree on scope. I offer flexible payment options: monthly retainers, project-based, or hourly rates. Invoices are sent electronically."
+              },
+              {
+                question: "What's your availability and response time?",
+                answer: "Flexible depending on workload. We agree on hours and expectations upfront. Typically, I respond within 2-4 hours for urgent matters and 24 hours for non-urgent items."
+              },
+              {
+                question: "How do we get started working together?",
+                answer: "Use the Contact page to tell me about your needs. We'll schedule a discovery call to discuss your requirements, then I'll prepare a proposal. Once approved, we begin with an onboarding process."
+              },
+            ].map((faq, i) => (
+              <details key={i} style={{
+                border: '1px solid #e5e5e5',
+                borderRadius: '12px',
+                padding: '24px',
+                backgroundColor: 'white',
+                cursor: 'pointer'
+              }}>
+                <summary style={{ 
+                  cursor: 'pointer', 
+                  fontWeight: '600',
+                  fontSize: '17px',
+                  color: '#1a1a1a',
+                  listStyle: 'none',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  outline: 'none'
+                }}>
+                  <span style={{ flex: 1, paddingRight: '20px' }}>{faq.question}</span>
+                  <span style={{ 
+                    color: '#7c3aed', 
+                    fontSize: '12px',
+                    flexShrink: 0
+                  }}>▼</span>
+                </summary>
+                <div style={{ 
+                  marginTop: '20px', 
+                  paddingTop: '20px', 
+                  borderTop: '1px solid #f0f0f0'
+                }}>
+                  <p style={{ 
+                    color: '#52525b', 
+                    lineHeight: '1.7',
+                    fontSize: '16px'
+                  }}>
+                    {faq.answer}
+                  </p>
+                </div>
+              </details>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Social & Contact */}
-      <section className="py-16 px-6 sm:px-16 text-center">
-        <h2 className="text-3xl font-semibold mb-6">Connect with Me</h2>
-        <div className="flex justify-center gap-6 flex-wrap mb-6">
-          <a href="mailto:bethgexecutiveva@gmail.com" className="hover:underline">Email</a>
-          <a href="https://instagram.com/bethgexecutiveva" target="_blank" rel="noopener noreferrer" className="hover:underline">Instagram</a>
-          <a href="https://twitter.com/bethexecutiveva" target="_blank" rel="noopener noreferrer" className="hover:underline">X</a>
-          <a href="https://www.youtube.com/@BethGExecutiveVA" target="_blank" rel="noopener noreferrer" className="hover:underline">YouTube</a>
-          <a href="https://www.tiktok.com/@bethgexecutiveva" target="_blank" rel="noopener noreferrer" className="hover:underline">TikTok</a>
-          <a href="https://www.facebook.com/bethgtheexecutiveva" target="_blank" rel="noopener noreferrer" className="hover:underline">Facebook</a>
-          <a href="https://www.linkedin.com/in/beth-g-/" target="_blank" rel="noopener noreferrer" className="hover:underline">LinkedIn</a>
+      {/* CTA SECTION */}
+      <section style={{
+        width: '100%',
+        padding: '100px 20px',
+        backgroundColor: '#f4f4f5',
+        textAlign: 'center'
+      }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <h2 style={{
+            fontSize: '40px',
+            fontWeight: 700,
+            marginBottom: '20px',
+            color: '#1a1a1a',
+            letterSpacing: '-0.5px'
+          }}>
+            Ready to Get Started?
+          </h2>
+
+          <p style={{
+            color: '#52525b',
+            fontSize: '18px',
+            marginBottom: '50px',
+            lineHeight: '1.7',
+            maxWidth: '600px',
+            marginLeft: 'auto',
+            marginRight: 'auto'
+          }}>
+            Let's simplify your workload and bring structure to your business. Focus on growth while I handle the details.
+          </p>
+
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
+            <Link 
+              href="/services" 
+              style={{
+                padding: '16px 36px',
+                backgroundColor: '#7c3aed',
+                color: 'white',
+                borderRadius: '10px',
+                textDecoration: 'none',
+                display: 'inline-block',
+                fontWeight: '600',
+                fontSize: '16px',
+                transition: 'all 0.2s'
+              }}
+            >
+              View All Services
+            </Link>
+
+            <Link 
+              href="/contact" 
+              style={{
+                padding: '16px 36px',
+                border: '2px solid #7c3aed',
+                backgroundColor: 'transparent',
+                color: '#7c3aed',
+                borderRadius: '10px',
+                textDecoration: 'none',
+                display: 'inline-block',
+                fontWeight: '600',
+                fontSize: '16px',
+                transition: 'all 0.2s'
+              }}
+            >
+              Schedule a Call
+            </Link>
+          </div>
         </div>
-        <p className="text-sm text-gray-500 dark:text-gray-400">
-          © {new Date().getFullYear()} Beth G. All rights reserved.
-        </p>
       </section>
+
+      {/* FOOTER */}
+      <footer style={{
+        width: '100%',
+        padding: '70px 20px 40px',
+        backgroundColor: '#0f0f12',
+        color: 'white',
+        textAlign: 'center',
+        borderTop: '1px solid #27272a'
+      }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          
+          <div style={{ marginBottom: '50px' }}>
+            <h3 style={{ 
+              fontSize: '22px', 
+              fontWeight: '600', 
+              marginBottom: '30px',
+              color: '#fafafa'
+            }}>
+              Connect With Me
+            </h3>
+            <div style={{
+              display: 'flex',
+              justifyContent: 'center',
+              flexWrap: 'wrap',
+              gap: '12px',
+              marginBottom: '40px'
+            }}>
+              {[
+                { name: '💬 WhatsApp', url: 'https://wa.me/254704046107' },
+                { name: '✉️ Email', url: 'mailto:bethgexecutiveva@gmail.com' },
+                { name: '🔗 LinkedIn', url: 'https://www.linkedin.com/in/bethgitonga49' },
+                { name: '📸 Instagram', url: 'https://www.instagram.com/bethgexecutiveva' },
+                { name: '📘 Facebook', url: 'https://www.facebook.com/BethGitongaVa' },
+                { name: '📱 TikTok', url: 'https://www.tiktok.com/@bethgexecutiveva' },
+                { name: '▶️ YouTube', url: 'https://www.youtube.com/@BethGExecutiveVA' },
+              ].map((social, index) => (
+                <a 
+                  key={index}
+                  href={social.url} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  style={{
+                    color: 'white',
+                    textDecoration: 'none',
+                    padding: '10px 20px',
+                    border: '1px solid rgba(255,255,255,0.15)',
+                    borderRadius: '8px',
+                    fontSize: '14px',
+                    backgroundColor: 'rgba(124, 58, 237, 0.2)',
+                    transition: 'all 0.2s'
+                  }}
+                >
+                  {social.name}
+                </a>
+              ))}
+            </div>
+          </div>
+          
+          <div style={{ 
+            paddingTop: '40px', 
+            borderTop: '1px solid rgba(255,255,255,0.1)' 
+          }}>
+            <p style={{ 
+              color: '#a1a1aa', 
+              fontSize: '15px',
+              marginBottom: '8px'
+            }}>
+              © 2026 Beth G, Executive VA. All rights reserved.
+            </p>
+            <p style={{ 
+              color: '#71717a', 
+              fontSize: '13px',
+              marginTop: '8px'
+            }}>
+              Strategic executive support for modern businesses • Remote VA services worldwide
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      {/* CSS for all hover effects */}
+      <style>{`
+        /* Navigation links hover effects */
+        nav a:not(:last-child):hover {
+          border-bottom-color: #7c3aed !important;
+          color: #7c3aed !important;
+        }
+        
+        /* Contact button hover effect */
+        nav a:last-child:hover {
+          background-color: #6d28d9 !important;
+          transform: scale(1.02);
+        }
+        
+        /* Hero section buttons hover */
+        section:first-of-type a:first-of-type:hover {
+          background-color: #6d28d9 !important;
+          transform: scale(1.02);
+        }
+        section:first-of-type a:last-child:hover {
+          background-color: #7c3aed !important;
+          color: white !important;
+          transform: scale(1.02);
+        }
+        
+        /* CTA section buttons hover */
+        section:last-of-type a:first-of-type:hover {
+          background-color: #6d28d9 !important;
+          transform: scale(1.02);
+        }
+        section:last-of-type a:last-child:hover {
+          background-color: #7c3aed !important;
+          color: white !important;
+          transform: scale(1.02);
+        }
+        
+        /* Footer social links hover */
+        footer a:hover {
+          background-color: #7c3aed !important;
+          transform: translateY(-2px);
+        }
+        
+        /* Smooth transitions for all interactive elements */
+        a, button {
+          transition: all 0.2s ease !important;
+        }
+      `}</style>
     </div>
   );
 }
