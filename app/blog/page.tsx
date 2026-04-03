@@ -64,7 +64,7 @@ export default function BlogPage() {
   ];
 
   // Function to get the correct URL for each post
-  const getPostUrl = (id) => {
+  const getPostUrl = (id: number) => {
     switch(id) {
       case 1:
         return "/blog/why-you-need-bethg-executive-va";
