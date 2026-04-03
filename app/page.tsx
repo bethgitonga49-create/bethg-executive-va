@@ -34,12 +34,12 @@ export default function Home() {
           flexWrap: 'wrap',
           gap: '16px'
         }}>
-          {/* Stylish Logo */}
+          {/* Stylish Logo - Changed to Green */}
           <div style={{ 
             fontFamily: "'Playfair Display', 'Times New Roman', Georgia, serif",
             fontSize: '22px',
             fontWeight: '700',
-            background: 'linear-gradient(135deg, #7c3aed 0%, #c084fc 100%)',
+            background: 'linear-gradient(135deg, #059669 0%, #10b981 100%)',
             backgroundClip: 'text',
             WebkitBackgroundClip: 'text',
             color: 'transparent',
@@ -62,7 +62,7 @@ export default function Home() {
                 fontWeight: '500',
                 fontSize: '15px',
                 padding: '6px 0',
-                borderBottom: '2px solid #7c3aed',
+                borderBottom: '2px solid #059669',
                 transition: 'all 0.2s'
               }}
             >
@@ -104,7 +104,7 @@ export default function Home() {
                 fontWeight: '500',
                 fontSize: '15px',
                 padding: '10px 24px',
-                backgroundColor: '#7c3aed',
+                backgroundColor: '#059669',
                 borderRadius: '8px',
                 transition: 'all 0.2s'
               }}
@@ -142,7 +142,7 @@ export default function Home() {
             fontSize: '20px',
             lineHeight: '1.7'
           }}>
-            I support <strong style={{ color: '#7c3aed' }}>founders, consultants, and growing businesses</strong> with strategic executive assistance built on clarity, discretion, and results. I handle your admin — so you can focus on what truly matters.
+            I support <strong style={{ color: '#059669' }}>founders, consultants, and growing businesses</strong> with strategic executive assistance built on clarity, discretion, and results. I handle your admin — so you can focus on what truly matters.
           </p>
 
           <div style={{ display: 'flex', justifyContent: 'center', gap: '20px', flexWrap: 'wrap' }}>
@@ -150,7 +150,7 @@ export default function Home() {
               href="/services" 
               style={{
                 padding: '16px 36px',
-                backgroundColor: '#7c3aed',
+                backgroundColor: '#059669',
                 color: 'white',
                 borderRadius: '10px',
                 textDecoration: 'none',
@@ -167,9 +167,9 @@ export default function Home() {
               href="/contact" 
               style={{
                 padding: '16px 36px',
-                border: '2px solid #7c3aed',
+                border: '2px solid #059669',
                 backgroundColor: 'transparent',
-                color: '#7c3aed',
+                color: '#059669',
                 borderRadius: '10px',
                 textDecoration: 'none',
                 display: 'inline-block',
@@ -202,7 +202,7 @@ export default function Home() {
               What I Do
             </h2>
             <p style={{
-              color: '#7c3aed',
+              color: '#059669',
               fontSize: '18px',
               maxWidth: '600px',
               margin: '0 auto',
@@ -286,7 +286,7 @@ export default function Home() {
                         {service.title}
                       </h3>
                       <span style={{ 
-                        color: '#7c3aed', 
+                        color: '#059669', 
                         marginLeft: '12px',
                         fontSize: '12px'
                       }}>▼</span>
@@ -301,7 +301,7 @@ export default function Home() {
                     </p>
                     <div style={{ 
                       fontSize: '13px', 
-                      color: '#7c3aed',
+                      color: '#059669',
                       display: 'flex',
                       alignItems: 'center',
                       gap: '8px'
@@ -331,7 +331,7 @@ export default function Home() {
                           padding: '6px 0'
                         }}>
                           <span style={{ 
-                            color: '#7c3aed', 
+                            color: '#059669', 
                             marginRight: '12px',
                             fontSize: '18px'
                           }}>`</span>
@@ -384,7 +384,7 @@ export default function Home() {
               Frequently Asked Questions
             </h2>
             <p style={{
-              color: '#7c3aed',
+              color: '#059669',
               fontSize: '18px',
               maxWidth: '600px',
               margin: '0 auto',
@@ -449,7 +449,7 @@ export default function Home() {
                 }}>
                   <span style={{ flex: 1, paddingRight: '20px' }}>{faq.question}</span>
                   <span style={{ 
-                    color: '#7c3aed', 
+                    color: '#059669', 
                     fontSize: '12px',
                     flexShrink: 0
                   }}>▼</span>
@@ -508,7 +508,7 @@ export default function Home() {
               href="/services" 
               style={{
                 padding: '16px 36px',
-                backgroundColor: '#7c3aed',
+                backgroundColor: '#059669',
                 color: 'white',
                 borderRadius: '10px',
                 textDecoration: 'none',
@@ -525,9 +525,9 @@ export default function Home() {
               href="/contact" 
               style={{
                 padding: '16px 36px',
-                border: '2px solid #7c3aed',
+                border: '2px solid #059669',
                 backgroundColor: 'transparent',
-                color: '#7c3aed',
+                color: '#059669',
                 borderRadius: '10px',
                 textDecoration: 'none',
                 display: 'inline-block',
@@ -590,7 +590,7 @@ export default function Home() {
                     border: '1px solid rgba(255,255,255,0.15)',
                     borderRadius: '8px',
                     fontSize: '14px',
-                    backgroundColor: 'rgba(124, 58, 237, 0.2)',
+                    backgroundColor: 'rgba(5, 150, 105, 0.2)',
                     transition: 'all 0.2s'
                   }}
                 >
@@ -622,45 +622,45 @@ export default function Home() {
         </div>
       </footer>
 
-      {/* CSS for all hover effects */}
+      {/* CSS for all hover effects - Changed to Green */}
       <style>{`
         /* Navigation links hover effects */
         nav a:not(:last-child):hover {
-          border-bottom-color: #7c3aed !important;
-          color: #7c3aed !important;
+          border-bottom-color: #059669 !important;
+          color: #059669 !important;
         }
         
         /* Contact button hover effect */
         nav a:last-child:hover {
-          background-color: #6d28d9 !important;
+          background-color: #047857 !important;
           transform: scale(1.02);
         }
         
         /* Hero section buttons hover */
         section:first-of-type a:first-of-type:hover {
-          background-color: #6d28d9 !important;
+          background-color: #047857 !important;
           transform: scale(1.02);
         }
         section:first-of-type a:last-child:hover {
-          background-color: #7c3aed !important;
+          background-color: #059669 !important;
           color: white !important;
           transform: scale(1.02);
         }
         
         /* CTA section buttons hover */
         section:last-of-type a:first-of-type:hover {
-          background-color: #6d28d9 !important;
+          background-color: #047857 !important;
           transform: scale(1.02);
         }
         section:last-of-type a:last-child:hover {
-          background-color: #7c3aed !important;
+          background-color: #059669 !important;
           color: white !important;
           transform: scale(1.02);
         }
         
         /* Footer social links hover */
         footer a:hover {
-          background-color: #7c3aed !important;
+          background-color: #059669 !important;
           transform: translateY(-2px);
         }
         
