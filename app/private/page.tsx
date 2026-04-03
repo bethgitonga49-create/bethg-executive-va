@@ -185,4 +185,29 @@ export default function PrivatePage() {
       {/* Footer */}
       <div style={{ 
         textAlign: 'center',
-        marginTop: '60
+        marginTop: '60px',
+        paddingTop: '40px',
+        borderTop: '1px solid #e5e5e5',
+        width: '100%',
+        maxWidth: '800px'
+      }}>
+        <p style={{ 
+          color: '#a1a1aa', 
+          fontSize: '14px',
+          letterSpacing: '3px',
+          textTransform: 'uppercase',
+          fontWeight: '500',
+          marginBottom: '12px'
+        }}>
+          Beth G — Executive VA
+        </p>
+        <p style={{ 
+          color: '#71717a', 
+          fontSize: '15px'
+        }}>
+          Strategic executive support for busy founders
+        </p>
+      </div>
+    </div>
+  );
+}

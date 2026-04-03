@@ -1,9 +1,6 @@
-import Link from "next/link";
+"use client";
 
-export const metadata = {
-  title: "Thank You | Beth G — Executive VA",
-  description: "Thank you for your payment. Beth G will contact you shortly to begin working together.",
-};
+import Link from "next/link";
 
 export default function ThankYouPage() {
   return (
@@ -372,7 +369,7 @@ export default function ThankYouPage() {
       </div>
 
       {/* Animation */}
-      <style jsx global>{`
+      <style>{`
         @keyframes bounce {
           from { transform: translateY(0); }
           to { transform: translateY(-10px); }
