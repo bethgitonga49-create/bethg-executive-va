@@ -89,9 +89,9 @@ export default function ContactPage() {
                 fontWeight: '500',
                 fontSize: '15px',
                 padding: '10px 24px',
-                backgroundColor: '#1a1a1a',
+                backgroundColor: '#059669',
                 borderRadius: '8px',
-                borderBottom: '2px solid #1a1a1a'
+                borderBottom: '2px solid #059669'
               }}
             >
               Contact
@@ -288,11 +288,11 @@ export default function ContactPage() {
                 backgroundColor: '#3b82f6',
                 borderRadius: '50%'
               }}></span>
-              <span>Respond within 24 hours</span>
+              <span>Respond within 2-4 hours</span>
             </div>
           </div>
 
-          {/* Option 3: Discovery Call */}
+          {/* Option 3: Paid Consultation Call */}
           <div style={{ 
             border: '1px solid #e5e5e5',
             borderRadius: '16px',
@@ -303,7 +303,7 @@ export default function ContactPage() {
             <div style={{
               width: '80px',
               height: '80px',
-              backgroundColor: '#fef2f2',
+              backgroundColor: '#f0fdf4',
               borderRadius: '50%',
               display: 'flex',
               alignItems: 'center',
@@ -320,7 +320,7 @@ export default function ContactPage() {
               color: '#1a1a1a',
               marginBottom: '16px'
             }}>
-              Discovery Call
+              Paid Consultation
             </h2>
             
             <p style={{
@@ -329,14 +329,14 @@ export default function ContactPage() {
               lineHeight: '1.6',
               marginBottom: '28px'
             }}>
-              Let's have a proper conversation about your needs. No obligation, just honest advice.
+              Let's have a proper conversation about your needs. 30-minute focused session.
             </p>
             
             <Link 
               href="#schedule-form"
               style={{
                 padding: '16px 32px',
-                backgroundColor: '#7c3aed',
+                backgroundColor: '#059669',
                 color: 'white',
                 borderRadius: '10px',
                 textDecoration: 'none',
@@ -347,7 +347,7 @@ export default function ContactPage() {
                 boxSizing: 'border-box'
               }}
             >
-              Schedule a Call
+              Schedule Consultation
             </Link>
             
             <div style={{
@@ -362,10 +362,10 @@ export default function ContactPage() {
               <span style={{ 
                 width: '8px', 
                 height: '8px', 
-                backgroundColor: '#7c3aed',
+                backgroundColor: '#059669',
                 borderRadius: '50%'
               }}></span>
-              <span>30-minute free consultation</span>
+              <span>$10 USD (30 min session)</span>
             </div>
           </div>
         </div>
@@ -388,7 +388,7 @@ export default function ContactPage() {
               color: '#1a1a1a',
               marginBottom: '16px'
             }}>
-              Schedule Your Free Consultation
+              Schedule Your Consultation
             </h2>
             
             <p style={{
@@ -399,7 +399,7 @@ export default function ContactPage() {
               margin: '0 auto'
             }}>
               Fill this out and I'll get back to you with available time slots. 
-              This call is completely free and there's zero obligation.
+              This is a paid consultation ($10 USD for 30 minutes).
             </p>
           </div>
           
@@ -426,7 +426,7 @@ export default function ContactPage() {
                   backgroundColor: '#fafafa',
                   boxSizing: 'border-box'
                 }}
-                placeholder="John Doe"
+                placeholder="Gitonga Beth"
               />
             </div>
             
@@ -452,7 +452,7 @@ export default function ContactPage() {
                   backgroundColor: '#fafafa',
                   boxSizing: 'border-box'
                 }}
-                placeholder="you@example.com"
+                placeholder="gitonga@example.com"
               />
             </div>
             
@@ -519,7 +519,7 @@ export default function ContactPage() {
               style={{
                 width: '100%',
                 padding: '18px',
-                backgroundColor: '#1a1a1a',
+                backgroundColor: '#059669',
                 color: 'white',
                 border: 'none',
                 borderRadius: '10px',
@@ -528,7 +528,7 @@ export default function ContactPage() {
                 cursor: 'pointer'
               }}
             >
-              Request Free Consultation
+              Request Consultation ($10 USD)
             </button>
             
             <p style={{
@@ -537,7 +537,7 @@ export default function ContactPage() {
               textAlign: 'center',
               marginTop: '20px'
             }}>
-              I'll email you within 24 hours to schedule our call
+              I'll email you within 2-4 hours to schedule our call
             </p>
           </form>
         </div>
