@@ -14,7 +14,7 @@ export default function ContactPage() {
       backgroundColor: '#fafafa'
     }}>
       
-      {/* NAVIGATION BAR - Updated with Green Theme, Learn & FAQ */}
+      {/* NAVIGATION BAR */}
       <nav style={{
         width: '100%',
         backgroundColor: 'white',
@@ -75,6 +75,9 @@ export default function ContactPage() {
         nav a:last-child:hover {
           background-color: #047857 !important;
           transform: scale(1.02);
+        }
+        button:hover {
+          background-color: #047857 !important;
         }
       `}</style>
 
@@ -348,7 +351,7 @@ export default function ContactPage() {
           </div>
         </div>
 
-        {/* Contact Form Section */}
+        {/* Contact Form Section - WORKING WITH FORMSPREE */}
         <div 
           id="schedule-form"
           style={{ 
@@ -381,7 +384,11 @@ export default function ContactPage() {
             </p>
           </div>
           
-          <form style={{ maxWidth: '600px', margin: '0 auto' }}>
+          <form 
+            action="https://formspree.io/f/mgopnjej"
+            method="POST"
+            style={{ maxWidth: '600px', margin: '0 auto' }}
+          >
             <div style={{ marginBottom: '24px' }}>
               <label style={{ 
                 display: 'block', 
@@ -394,6 +401,7 @@ export default function ContactPage() {
               </label>
               <input
                 type="text"
+                name="name"
                 required
                 style={{
                   width: '100%',
@@ -420,6 +428,7 @@ export default function ContactPage() {
               </label>
               <input
                 type="email"
+                name="email"
                 required
                 style={{
                   width: '100%',
@@ -445,6 +454,7 @@ export default function ContactPage() {
                 What brings you here today? *
               </label>
               <select
+                name="inquiry_type"
                 required
                 style={{
                   width: '100%',
@@ -476,6 +486,7 @@ export default function ContactPage() {
                 Tell me about your situation *
               </label>
               <textarea
+                name="message"
                 required
                 rows={4}
                 style={{
@@ -503,7 +514,8 @@ export default function ContactPage() {
                 borderRadius: '10px',
                 fontSize: '16px',
                 fontWeight: '600',
-                cursor: 'pointer'
+                cursor: 'pointer',
+                transition: 'all 0.2s'
               }}
             >
               Request Consultation ($10 USD)
