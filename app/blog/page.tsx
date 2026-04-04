@@ -92,7 +92,7 @@ export default function BlogPage() {
       paddingTop: '80px'
     }}>
       
-      {/* NAVIGATION BAR - Updated with Green Theme, Learn & FAQ */}
+      {/* NAVIGATION BAR */}
       <nav style={{
         width: '100%',
         backgroundColor: 'white',
@@ -413,7 +413,7 @@ export default function BlogPage() {
           </div>
         </div>
 
-        {/* Newsletter Signup */}
+        {/* Newsletter Signup - NOW WORKING WITH FORMSPREE */}
         <div style={{ 
           border: '1px solid #e5e5e5',
           borderRadius: '16px',
@@ -444,17 +444,23 @@ export default function BlogPage() {
             tools, and workflow optimization every two weeks.
           </p>
           
-          <div style={{ 
-            display: 'flex', 
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            gap: '12px',
-            maxWidth: '500px',
-            margin: '0 auto'
-          }}>
+          <form 
+            action="https://formspree.io/f/mgopnjej"
+            method="POST"
+            style={{ 
+              display: 'flex', 
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: '12px',
+              maxWidth: '500px',
+              margin: '0 auto'
+            }}
+          >
             <input
               type="email"
+              name="email"
               placeholder="Your email address"
+              required
               style={{
                 flex: 1,
                 minWidth: '200px',
@@ -467,6 +473,7 @@ export default function BlogPage() {
             />
             
             <button
+              type="submit"
               style={{
                 padding: '14px 32px',
                 backgroundColor: '#059669',
@@ -480,7 +487,7 @@ export default function BlogPage() {
             >
               Subscribe
             </button>
-          </div>
+          </form>
           
           <p style={{
             color: '#71717a',
